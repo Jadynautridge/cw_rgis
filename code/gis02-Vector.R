@@ -75,5 +75,21 @@ ggplot()+
   geom_sf(data=sf_str)+
   geom_sf(data=sf_site)
 
+# excercise ---------------------------------------------------------------
 
+
+sf_str_as<-readRDS("data/sf_stream_as.rds")
+
+sf::st_crs(sf_str_as)
+sf::st_crs(sf_nc_county)
+
+ggplot2::ggplot()+
+  ggplot2::geom_sf(data=sf_nc_county)+
+  ggplot2::geom_sf(data=sf_str_as)
+
+sf_nc_as<-dplyr::filter(sf_nc_county, county=="ashe")
+
+ggplot()+
+  geom_sf(data=sf_nc_as)+
+  geom_sf(data=sf_str_as)
 
