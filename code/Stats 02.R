@@ -57,3 +57,4 @@ iris_summary <- iris_sub %>%
             sum_s1 = sum(Sepal.Length))
   
 
+(swirl
